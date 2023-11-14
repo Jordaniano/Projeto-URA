@@ -1,5 +1,5 @@
-//led do labrinto
-int pin_led_e = 8;
+//led do labirinto
+int pin_led_e = 8; 
 int pin_led1 = 9;
 int pin_led2 = 13;
 int pin_led3 = 12;
@@ -20,22 +20,24 @@ int valor_nmd2;
 
 void setup(){
   Serial.begin (9600);
+  //led_labirinto
   pinMode(pin_led1, OUTPUT);
   pinMode(pin_led2, OUTPUT);
   pinMode(pin_led3, OUTPUT);
   pinMode(pin_led4, OUTPUT);
   pinMode(pin_led_e, OUTPUT);
   pinMode(pin_led_s, OUTPUT);
+  //potenciometro
   pinMode(pin_pot1, INPUT);
   pinMode(pin_pot2, INPUT);
-  pinMode (vermelho, OUTPUT); // led rgb
-  pinMode (verde, OUTPUT); // led rgb
-  pinMode (azul, OUTPUT); // led rgb
-  digitalWrite(azul, LOW); // led rgb
-  digitalWrite(verde, LOW); // led rgb
-  digitalWrite(vermelho, HIGH); // led rgb
-}
-
+  //led_rgb
+  pinMode (vermelho, OUTPUT); 
+  pinMode (verde, OUTPUT); 
+  pinMode (azul, OUTPUT); 
+  digitalWrite(azul, LOW); 
+  digitalWrite(verde, LOW); 
+  digitalWrite(vermelho, HIGH); 
+} 
 void loop(){
  //mapeamento pot
   potvalor1 = analogRead(pin_pot1);
