@@ -19,6 +19,7 @@ int valor_nmd1;
 int valor_nmd2;
 
 void setup(){
+  //monitor serial
   Serial.begin (9600);
   //led_labirinto
   pinMode(pin_led1, OUTPUT);
@@ -27,6 +28,7 @@ void setup(){
   pinMode(pin_led4, OUTPUT);
   pinMode(pin_led_e, OUTPUT);
   pinMode(pin_led_s, OUTPUT);
+  digitalWrite(pin_led_e, HIGH);
   //potenciometro
   pinMode(pin_pot1, INPUT);
   pinMode(pin_pot2, INPUT);
@@ -37,17 +39,18 @@ void setup(){
   digitalWrite(azul, LOW); 
   digitalWrite(verde, LOW); 
   digitalWrite(vermelho, HIGH); 
+  
 } 
 void loop(){
  //mapeamento pot
   potvalor1 = analogRead(pin_pot1);
   potvalor2 = analogRead(pin_pot2);
   valor_nmd1 = map(potvalor1, 0, 1023, 0, 180);
-  valor_nmd2 = map(potvalor2, 0, 1023, 0, 180);//Ajeitar os valores
-  digitalWrite(pin_led_e, HIGH);
+  valor_nmd2 = map(potvalor2, 0, 1023, 0, 180);
   delay(1000);
   
-  if(1>valor_nmd1>5){
+  
+  if(1>valor_nmd1>5 && pin_led_e==HIGH){
   
   }
   
