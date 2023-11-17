@@ -69,6 +69,7 @@ void loop(){
   tone(buzzer,50, 1000);
   delay(1000);
   }
+}
   //resposta certa (2 pergunta)
   
 
