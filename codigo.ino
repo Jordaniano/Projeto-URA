@@ -17,6 +17,9 @@ int azul = 5;
 //Valor no monitor
 int valor_nmd1;
 int valor_nmd2;
+//buzzer
+int buzzer = 4;
+
 
 void setup(){
   //monitor serial
@@ -39,6 +42,8 @@ void setup(){
   digitalWrite(azul, LOW); 
   digitalWrite(verde, LOW); 
   digitalWrite(vermelho, HIGH); 
+  //buzzer
+  pinMode(buzzer, OUTPUT);
   
 } 
 void loop(){
@@ -49,12 +54,23 @@ void loop(){
   valor_nmd2 = map(potvalor2, 0, 1023, 0, 180);
   delay(1000);
   
-  
-  if(1>valor_nmd1>5 && pin_led_e==HIGH){
-  
+  //resposta certa(1 pergunta)
+  if(1>valor_nmd1>5 ){
+  digitalWrite(pin_led1, HIGH);
+  digitalWrite(azul, LOW); 
+  digitalWrite(verde, HIGH); 
+  digitalWrite(vermelho, HIGH);
+  delay(1000);
+  }else if(5>valor_nmd1>10){ //resposta errada(1 pergunta)
+  digitalWrite(azul, LOW); 
+  digitalWrite(verde, LOW); 
+  digitalWrite(vermelho, HIGH);
+  delay(1000);
+  tone(buzzer,50, 1000);
+  delay(1000);
   }
+  //resposta certa (2 pergunta)
   
-}
 
 //Códigos q ainda vão ser usados
 // digitalWrite(pin_led_Vd, HIGH);
@@ -62,7 +78,4 @@ void loop(){
 //delay(1000);
 //valor_fotor = analogRead(pin_fotor);
 //valor_normalizado = map(valor_fotor, 0, 1023, 0, 180);
-//SetColor = (255, 0, 0);//Red
 //delay(1000);
-//SetColor = (0, 255, 0);//green
-//SetColor = (255, 255, 0);//yellow
