@@ -7,16 +7,18 @@
 
 <h2 align="left">
     >Sobre os componentes:</a>
+
 </h2>
 
 <h2 align="left">
     <a href="https://github.com/NeptUser/Rhianna-MKS3D">Créditos</a>
 </h2>
 
-- Firmware original: [Marlin](https://marlinfw.org/docs/basics/introduction.html)
-- Configuração inicial: [Studio Saturn](https://github.com/StudioSaturn/MKS3D)
-- Atualização 2: [Rutileno Gabriel](https://github.com/BigLeno)
-- Atualização 3: [Pedro Albuquerque](https://github.com/NeptUser)
+- LEDs:
+  >
+- LED RGB: 
+- POTENCIOMETROS:
+- BUZZER: 
 
 >Tendo em vista que o Studio Saturn foi descontinuado e novos colaboradores estão participando do desenvolvimento da impressora, o firmware foi movido de repositório afim de facilitar o versionamento e atualização das configurações da impressora, entretando é possivel acessar o repositório original [neste link](https://github.com/StudioSaturn/MKS3D)
 
