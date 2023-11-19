@@ -20,14 +20,13 @@
   > ddd
 
   <h2 align="left">
-    <a href="https://github.com/NeptUser/Rhianna-MKS3D">Créditos</a>
+    >Como jogar:</a>
 </h2>
-
 
 >Tendo em vista que o Studio Saturn foi descontinuado e novos colaboradores estão participando do desenvolvimento da impressora, o firmware foi movido de repositório afim de facilitar o versionamento e atualização das configurações da impressora, entretando é possivel acessar o repositório original [neste link](https://github.com/StudioSaturn/MKS3D)
 
 <h2 align="left">
-    <a href="https://github.com/NeptUser/Rhianna-MKS3D">Descrição do Projeto</a>
+    >Sobre o Código: </a>
 </h2>
 
 >Desenvolvimento de uma Impressora 3D de estrutura HyperCube, por meio do uso da Mainboard MKS TinyBee V1.0 e firmware Marlin, a MKS TinyBee é compativel com o acesso remoto, sendo uma aplicação do conceito de internet das coisas (IOT). As tecnologias de IoT se apresentam como um setor extremamente aquecido, onde o desenvolvimento de dispositivos compatíveis com a Internet das Coisas se relaciona diretamente com os objetivos visados no laboratório de automação e robótica (LAR), localizado na Univesidade Federal do Rio Grande do Norte (UFRN).
