@@ -1,8 +1,8 @@
 <h1 align="left">
-    <a href="https://github.com/Jordaniano/Projeto-URA">Nome do Projeto: Labirinto Quiz</a>
+    <a href="https://github.com/Jordaniano/Projeto-URA">Labirinto Quiz</a>
 </h1>
 
-> O Labirinto-Quiz é um desafio proposto pelo projeto de extensão Um Robô Por Aluno (URA) na Universidade Federal do Rio Grande do Norte (UFRN), realizado com o intuito de propagar o conhecimento sobre robótica, e assuntos relacionados à base nacional curricular comum para os discentes Secundaristas. 
+> O Labirinto-Quiz é um desafio proposto pelo projeto de extensão Um Robô Por Aluno (URA) realizado na Universidade Federal do Rio Grande do Norte (UFRN), com o intuito de propagar o conhecimento sobre robótica, e assuntos relacionados à base nacional curricular comum para os discentes Secundaristas. 
 > O labirinto chega com conhecimentos sobre programação em C++ no Arduino UNO e utiliza os seguintes componentes: LED, LED RGB, Potenciômetro, buzzer, placa de ensaio, e claro o proprío Arduino.
 
 <div align="center">
