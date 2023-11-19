@@ -10,15 +10,19 @@
 
 </h2>
 
-<h2 align="left">
+- LEDs:
+  > aaa
+- LED RGB:
+  > bbb
+- POTENCIOMETROS:
+  > cc
+- BUZZER:
+  > ddd
+
+  <h2 align="left">
     <a href="https://github.com/NeptUser/Rhianna-MKS3D">Créditos</a>
 </h2>
 
-- LEDs:
-  >
-- LED RGB: 
-- POTENCIOMETROS:
-- BUZZER: 
 
 >Tendo em vista que o Studio Saturn foi descontinuado e novos colaboradores estão participando do desenvolvimento da impressora, o firmware foi movido de repositório afim de facilitar o versionamento e atualização das configurações da impressora, entretando é possivel acessar o repositório original [neste link](https://github.com/StudioSaturn/MKS3D)
 
