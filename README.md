@@ -58,8 +58,3 @@
 <h2 align="left">
     <a href="https://github.com/NeptUser/Rhianna-MKS3D">Autores</a>
 </h2>
-
->Responsáveis pelo projeto
-
-| [<img src="https://avatars.githubusercontent.com/u/92885893?v=4" width=115><br><sub>Rutileno Gabriel</sub>](https://github.com/BigLeno) | [<img src="https://avatars.githubusercontent.com/u/25187825?v=4" width=115><br><sub>Luis Martins</sub>](https://github.com/luissssmartins) | [<img src="https://avatars.githubusercontent.com/u/73067899?v=4" width=115><br><sub>Pedro Albuquerque</sub>](https://github.com/NeptUser) |
-| :---: | :---: | :---: |
