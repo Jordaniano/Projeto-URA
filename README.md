@@ -1,5 +1,5 @@
 <h1 align="left">
-    <a href="https://github.com/Jordaniano/Projeto-URA">Nome do Jogo: Labirinto Quiz</a>
+    <a href="https://github.com/Jordaniano/Projeto-URA">Nome do Projeto: Labirinto Quiz</a>
 </h1>
 
 > Sou um estudante de Ciências e Tecnologia na Universidade Federal do Rio Grande do Norte (UFRN). Tenho bastante interesse em projetos que envolvem programação, robótica e desenvolvimento de hardware.
