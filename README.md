@@ -6,7 +6,7 @@
 > O labirinto chega com conhecimentos sobre programação em C++ no Arduino UNO e utiliza os seguintes componentes: LED, LED RGB, Potenciômetro, buzzer, placa de ensaio, e claro, o proprío Arduino.
 
 <h2 align="left">
-    >Sobre os componentes:</a>
+    <a href=>Sobre os componentes:</a>
 </h2>
 
 <h2 align="left">
