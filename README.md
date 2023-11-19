@@ -5,6 +5,14 @@
 > O Labirinto-Quiz é um desafio proposto pelo projeto de extensão Um Robô Por Aluno (URA) realizado na Universidade Federal do Rio Grande do Norte (UFRN), com o intuito de propagar o conhecimento sobre robótica, e assuntos relacionados à base nacional curricular comum para os discentes Secundaristas. 
 > O labirinto chega com conhecimentos sobre programação em C++ no Arduino UNO e utiliza os seguintes componentes: LED, LED RGB, Potenciômetro, buzzer, placa de ensaio, e claro, o proprío Arduino.
 
+
+  <h2 align="left">
+    Como jogar:</a>
+</h2>
+
+>Tendo em vista que o Studio Saturn foi descontinuado e novos colaboradores estão participando do desenvolvimento da impressora, o firmware foi movido de repositório afim de facilitar o versionamento e atualização das configurações da impressora, entretando é possivel acessar o repositório original [neste link](https://github.com/StudioSaturn/MKS3D)
+
+
 <h2 align="left">
     Sobre os componentes:</a>
 
@@ -19,12 +27,7 @@
 - BUZZER:
   > ddd
 
-  <h2 align="left">
-    Como jogar:</a>
-</h2>
-
->Tendo em vista que o Studio Saturn foi descontinuado e novos colaboradores estão participando do desenvolvimento da impressora, o firmware foi movido de repositório afim de facilitar o versionamento e atualização das configurações da impressora, entretando é possivel acessar o repositório original [neste link](https://github.com/StudioSaturn/MKS3D)
-
+  
 <h2 align="left">
     Sobre o Código: </a>
 </h2>
