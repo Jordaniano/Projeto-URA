@@ -5,9 +5,9 @@
 > O Labirinto-Quiz é um desafio proposto pelo projeto de extensão Um Robô Por Aluno (URA) realizado na Universidade Federal do Rio Grande do Norte (UFRN), com o intuito de propagar o conhecimento sobre robótica, e assuntos relacionados à base nacional curricular comum para os discentes Secundaristas. 
 > O labirinto chega com conhecimentos sobre programação em C++ no Arduino UNO e utiliza os seguintes componentes: LED, LED RGB, Potenciômetro, buzzer, placa de ensaio, e claro, o proprío Arduino.
 
-<h1 align="left">
+<h2 align="left">
     <a href="https://github.com/StudioSaturn/MKS3D">MKS3D</a>
-</h1>
+</h2>
 
 <h2 align="left">
     <a href="https://github.com/NeptUser/Rhianna-MKS3D">Créditos</a>
