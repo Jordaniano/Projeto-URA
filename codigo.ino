@@ -43,6 +43,13 @@ void setup(){
   pinMode(buzzer, OUTPUT);
 } 
 
+void executor(int pinVermelho, int pinVerde, int pinAzul, int estadoR, int estadoG, int estadoB, int tempo) {
+  digitalWrite(pinVermelho, estadoR);
+  digitalWrite(pinVerde, estadoG);
+  digitalWrite(pinAzul, estadoB);
+  delay(tempo);
+}
+
 void action_capture(String cor) {
   int tempoPadrao = 1000;  // Tempo padrão para cada estado (1 segundo)
   int estadoDesligado = 0;
