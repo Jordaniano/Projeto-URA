@@ -38,9 +38,7 @@
     Créditos:</a>
 </h2>
 
-- [Marlin Firmware](https://marlinfw.org/docs/basics/introduction.html)
-- [Makerbase MKS TinyBee Documentation](https://github.com/makerbase-mks/MKS-TinyBee)
-- [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
-- [PlatformIO Extension for VSCode](https://platformio.org/)
+- [Maria Clara](https://marlinfw.org/docs/basics/introduction.html)
+- [Jordan Ian](https://github.com/makerbase-mks/MKS-TinyBee)
 
 
