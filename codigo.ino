@@ -48,7 +48,7 @@ void executor(int pinVermelho, int pinVerde, int pinAzul, int estadoR, int estad
 }
 
 void action_capture(String cor) {
-  int tempoPadrao = 1000;  // Tempo padrão para cada estado (1 segundo)
+  int tempoPadrao = 0;  // Tempo padrão para cada estado (1 segundo)
   int estadoDesligado = 1;
   int estadoLigado = 0;
   
