@@ -38,7 +38,7 @@
     Créditos:</a>
 </h2>
 
-- [Maria Clara](https://marlinfw.org/docs/basics/introduction.html)
+- [Maria Clara](https://github.com/Clara-Parpinelli)
 - [Jordan Ian](https://github.com/Jordaniano)
 
 
