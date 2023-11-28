@@ -39,6 +39,6 @@
 </h2>
 
 - [Maria Clara](https://marlinfw.org/docs/basics/introduction.html)
-- [Jordan Ian](https://github.com/makerbase-mks/MKS-TinyBee)
+- [Jordan Ian](https://github.com/Jordaniano)
 
 
