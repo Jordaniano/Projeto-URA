@@ -47,9 +47,13 @@
   > Chama a função  “executor” para ligar as entradas necessárias para o Led RGB reproduzir as cores desejadas sendo elas: vermelho, verde e amarelo.
 - Função "loop":
   > O circuito começa com o Led_entrada e o Led RGB no vermelho.
-  > O início do código é dedicado a pegar os valores padrões dos potenciometros (de 0 a 1023) e mapea-los para valores de 0 a 10 afim de tornar a leitura desses valores mais precisas. 
-  > Utilizando a estrutura condicionale If else o valor do Potenciômetro 1 é verificado e se caso a pessoa acerte liga o Led 1 e liga a cor amarelo do Led  RGB caso o valor do potenciometro esteja entre 1 e 5, usando a função “action  capture”/ caso erre o Led 2 irá ligar e o Led RGB continuará no vermelho caso o valor do potenciometro esteja entre 6 a 10. 
+  
+  > O início do código é dedicado a pegar os valores padrões dos potenciometros (de 0 a 1023) e mapea-los para valores de 0 a 10 afim de tornar a leitura desses valores mais precisas.
+  
+  > Utilizando a estrutura condicionale If else o valor do Potenciômetro 1 é verificado e se caso a pessoa acerte liga o Led 1 e liga a cor amarelo do Led  RGB caso o valor do potenciometro esteja entre 1 e 5, usando a função “action  capture”/ caso erre o Led 2 irá ligar e o Led RGB continuará no vermelho caso o valor do potenciometro esteja entre 6 a 10.
+  
   > Utilizando a estrutura condicionale If else o valor do Potenciômetro 2 e se caso a pessoa acerte liga o Led 3 e liga a cor amarelo do Led  RGB caso o valor do potenciometro esteja entre 1 e 5, usando a função “action  capture”/ caso erre o Led 4 irá ligar e o Led RGB continuará no amarelo caso o valor do potenciometro esteja entre 6 a 10.
+  
   > Essas estruturas condicionais definem a leitura de valor 0 dos potenciometros como um indicativo para desligar os Leds ligados pelo labirinto.
   > Caso o Led 1 e 3 estiverem acesos, o Led de saída Ligará e o Led RGB ficará ligado no verde, indicando a vitória do desafio.
 
