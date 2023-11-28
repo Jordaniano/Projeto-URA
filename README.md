@@ -10,7 +10,7 @@
     Como jogar:</a>
 </h2>
 
->Tendo em vista que o Studio Saturn foi descontinuado e novos colaboradores estão participando do desenvolvimento da impressora, o firmware foi movido de repositório afim de facilitar o versionamento e atualização das configurações da impressora, entretando é possivel acessar o repositório original [neste link](https://github.com/StudioSaturn/MKS3D)
+>O jogador tera que responder algumas perguntas baseados na base comum curricular para poder avançar no labirinto. O objetivo é atravessa-lo ligando os Leds que correspondem o caminho até o final do labirinto
 
 
 <h2 align="left">
