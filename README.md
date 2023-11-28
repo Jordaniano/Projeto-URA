@@ -23,9 +23,8 @@
 - LED RGB:
   > Indica se o jogador esta seguindo o caminho correto de ou não. Ele varia entre vermelho, amarelo e verde indicando, respectivamente, que o jogador está mais distante a mais perto do final do labirinto
 - POTENCIOMETROS:
-  > cc
-- BUZZER:
-  > ddd
+  > Os potenciomentros controlam os leds dipostos no decorrer do labirinto. O potenciomentro 01 pode ligar os Leds 01 e 02 e o potenciomentro 02  pode ligar os Leds 03 e 04
+
 
   
 <h2 align="left">
