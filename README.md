@@ -19,9 +19,9 @@
 </h2>
 
 - LEDs:
-  > aaa
+  > Indicam o caminho que o jogador pecorreu até o final do labirinto
 - LED RGB:
-  > bbb
+  > Indica se o jogador esta seguindo o caminho correto de ou não. Ele varia entre vermelho, amarelo e verde indicando, respectivamente, que o jogador está mais distante a mais perto do final do labirinto
 - POTENCIOMETROS:
   > cc
 - BUZZER:
