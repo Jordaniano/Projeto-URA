@@ -56,13 +56,16 @@
   
   > Essas estruturas condicionais definem a leitura de valor 0 dos potenciometros como um indicativo para desligar os Leds ligados pelo labirinto.
   > Caso o Led 1 e 3 estiverem acesos, o Led de saída Ligará e o Led RGB ficará ligado no verde, indicando a vitória do desafio.
-<h2 align="left">
-    Artigo: </a>
-</h2>
 
 <h2 align="left">
      <a href="https://docs.google.com/document/u/1/d/e/2PACX-1vQ1gxdzNtT72nHXmk283pnN9YDIfpJn--Yb9_wYfMGEOX4IdRJCAhf3w3B4JRYZQA/pub">Artigo <--- </a>
 </h2>
+
+         
+<h2 align="left">
+    Créditos: </a>
+</h2>
+
 
 - [Maria Clara](https://github.com/Clara-Parpinelli)
 - [Jordan Ian](https://github.com/Jordaniano)
