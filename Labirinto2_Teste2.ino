@@ -135,7 +135,7 @@ void fase2(){
     	digitalWrite(pin_led_03, LOW);//Led03
     	digitalWrite(pin_led_04, LOW);//Led04
     	delay(400);
-        estado_buttom_esquerda = digitalRead(3);
+      estado_buttom_esquerda = digitalRead(3);
   		estado_buttom_direita = digitalRead(2);
     	if(estado_buttom_esquerda == HIGH){;
       		digitalWrite(pin_led_03, HIGH);//Led03(CERTO)
