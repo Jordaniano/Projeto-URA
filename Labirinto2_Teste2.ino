@@ -2,7 +2,10 @@
 int estado_buttom_esquerda = 0;
 int estado_buttom_direita = 0;
 
-
+//led rgb 
+#define PIN_VERMELHO 2
+#define PIN_VERDE 3
+#define PIN_AZUL 4
 
 // led de entrada ao labirinto
 int pin_led_e = 12;
@@ -86,6 +89,7 @@ void fase1(){
   digitalWrite(pin_led_08, LOW);
   digitalWrite(pin_led_09, LOW);
   digitalWrite(pin_led_f, LOW);
+  action_capture("vermelho");
   
   while(estado_buttom_esquerda != HIGH || estado_buttom_direita != HIGH){
   	estado_buttom_esquerda = digitalRead(3);
@@ -118,7 +122,8 @@ void fase2(){
   while(estado_buttom_esquerda != HIGH || estado_buttom_direita != HIGH){
   	// se a pessoa foi pro caminho certo
   	if(digitalRead(pin_led_01) == HIGH){  // se o Led01 está ligado
-        estado_buttom_esquerda = digitalRead(3);
+      action_capture("amarelo");
+      estado_buttom_esquerda = digitalRead(3);
   		estado_buttom_direita = digitalRead(2);
     	Serial.println("Botão esquerdo: ");
     	Serial.println(estado_buttom_esquerda);
@@ -144,7 +149,8 @@ void fase2(){
           	break;
     	}
   	}else if(digitalRead(pin_led_02) == HIGH){
-        estado_buttom_esquerda = digitalRead(3);
+      action_capture("vermelho");
+      estado_buttom_esquerda = digitalRead(3);
   		estado_buttom_direita = digitalRead(2);
     	Serial.println("Botão esquerdo: ");
     	Serial.println(estado_buttom_esquerda);
@@ -174,7 +180,8 @@ void fase2(){
 void fase3(){
   while(estado_buttom_esquerda != HIGH || estado_buttom_direita != HIGH){
   	if(digitalRead(pin_led_03) == HIGH){
-    	estado_buttom_esquerda = digitalRead(3);
+    	action_capture("amarelo");
+      estado_buttom_esquerda = digitalRead(3);
     	estado_buttom_direita = digitalRead(2);
     	Serial.println("Botão esquerdo: ");
     	Serial.println(estado_buttom_esquerda);
@@ -194,7 +201,8 @@ void fase3(){
   	}
   
   	else if(digitalRead(pin_led_04) == HIGH){
-    	estado_buttom_esquerda = digitalRead(3);
+    	action_capture("vermelho");
+      estado_buttom_esquerda = digitalRead(3);
     	estado_buttom_direita = digitalRead(2);
     	Serial.println("Botão esquerdo: ");
     	Serial.println(estado_buttom_esquerda);
@@ -215,11 +223,13 @@ void fase3(){
   
   	else if(digitalRead(pin_led_08) == HIGH){
   		fase = 4;
+      action_capture("vermelho");
     	break;
   	}
   
   	else if(digitalRead(pin_led_07) == HIGH){
-        estado_buttom_esquerda = digitalRead(3);
+      action_capture("vermelho");
+      estado_buttom_esquerda = digitalRead(3);
   		estado_buttom_direita = digitalRead(2);
         Serial.println("Botão esquerdo: ");
     	Serial.println(estado_buttom_esquerda);
@@ -245,6 +255,7 @@ void fase4(){
   estado_buttom_direita = digitalRead(2);
   if(digitalRead(pin_led_06) == HIGH){
     digitalWrite(pin_led_f, HIGH);
+    action_capture("verde");
     if(estado_buttom_esquerda == HIGH || estado_buttom_direita == HIGH){
       fase = 1;
     }
@@ -252,5 +263,36 @@ void fase4(){
     if(estado_buttom_esquerda == HIGH || estado_buttom_direita == HIGH){
       fase = 1;
   	}
+  }
+}
+void executor(int pinVermelho, int pinVerde, int pinAzul, int estadoR, int estadoG, int estadoB, int tempo) {
+  digitalWrite(pinVermelho, estadoR);
+  digitalWrite(pinVerde, estadoG);
+  digitalWrite(pinAzul, estadoB);
+  delay(tempo);
+}
+void action_capture(String cor) {
+  int tempoPadrao = 0;  // Tempo padrão para cada estado (1 segundo)
+  int estadoDesligado = 1;
+  int estadoLigado = 0;
+  
+  if (cor == "vermelho") {
+    executor(PIN_VERMELHO, PIN_VERDE, PIN_AZUL, estadoLigado, estadoDesligado, estadoDesligado, tempoPadrao);
+
+  } else if (cor == "verde") {
+    executor(PIN_VERMELHO, PIN_VERDE, PIN_AZUL, estadoDesligado, estadoLigado, estadoDesligado, tempoPadrao);
+   
+  } else if (cor == "azul") {
+    executor(PIN_VERMELHO, PIN_VERDE, PIN_AZUL, estadoDesligado, estadoDesligado, estadoLigado, tempoPadrao);
+    
+  } else if(cor == "amarelo"){
+    executor(PIN_VERMELHO, PIN_VERDE, PIN_AZUL, estadoLigado, estadoLigado, estadoDesligado, tempoPadrao);
+   
+  }else if(cor == "branco"){
+    executor(PIN_VERMELHO, PIN_VERDE, PIN_AZUL, estadoLigado, estadoLigado, estadoLigado, tempoPadrao);
+   
+  }
+  else{
+    Serial.println("Cor desconhecida");
   }
 }
