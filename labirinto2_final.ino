@@ -1,9 +1,9 @@
 // estados dos botoes
-int estado_buttom_esquerda;
-int estado_buttom_direita;
+int estado_buttom_esquerda = 0;
+int estado_buttom_direita = 0;
 
 //identificar último led ligado
-int x;
+int x = 0;
 
 // led de entrada ao labirinto
 int pin_led_e = 12;
@@ -27,9 +27,9 @@ int buttom_esquerda = 47;
 int buttom_direita = 41;
 
 //led rgb 
-#define PIN_VERMELHO 2
-#define PIN_VERDE 3
-#define PIN_AZUL 4
+#define PIN_VERMELHO 31
+#define PIN_VERDE 33
+#define PIN_AZUL 35
 
 //Variavel de controle de fase
 int fase = 1;
@@ -59,11 +59,14 @@ void setup() {
   pinMode(buttom_direita, INPUT);
   
   digitalWrite(pin_led_e, HIGH);
-  
+  pinMode(PIN_VERMELHO, OUTPUT);
+  pinMode(PIN_VERDE, OUTPUT);
+  pinMode(PIN_AZUL, OUTPUT);
   Serial.begin(9600);
 }
 
 void loop() {
+  action_capture("vermelho");
   if (ffase1 == false){
     fase = 1;
   }else if (ffase2 == false){
@@ -94,13 +97,11 @@ void loop() {
 }
 
 void fase1(){
-  action_capture("vermelho");
-  estado_buttom_esquerda = 0;
-  estado_buttom_direita = 0;
 
   while(estado_buttom_esquerda != HIGH || estado_buttom_direita != HIGH){
-  	estado_buttom_esquerda = digitalRead(47);
-  	estado_buttom_direita = digitalRead(41);
+    action_capture("vermelho");
+    estado_buttom_esquerda = digitalRead(47);
+    estado_buttom_direita = digitalRead(41);
 
     //Leitura Serial
     Serial.println("Botão esquerdo: ");
@@ -110,23 +111,24 @@ void fase1(){
 
     //Indicando caminho disponível
     digitalWrite(pin_led_01, HIGH);//Led01
-  	digitalWrite(pin_led_02, HIGH);//Led02
-  	delay(400);
+    digitalWrite(pin_led_02, HIGH);//Led02
+    delay(400);
     digitalWrite(pin_led_01, LOW);//Led01
-  	digitalWrite(pin_led_02, LOW);//Led02
-  	delay(400);
+    digitalWrite(pin_led_02, LOW);//Led02
+    delay(400);
 
-  	estado_buttom_esquerda = digitalRead(47);
-  	estado_buttom_direita = digitalRead(41);
+    estado_buttom_esquerda = digitalRead(47);
+    estado_buttom_direita = digitalRead(41);
 
 
-  	if(estado_buttom_esquerda == HIGH){
+    if(estado_buttom_esquerda == HIGH){
+      digitalWrite(pin_led_01, HIGH);//Led01(CERTO)
       x = 1;
       fase = 2;
       ffase1 = true;
       fase2();
-  	}else if(estado_buttom_direita == HIGH){
-    	digitalWrite(pin_led_02, HIGH);//Led02(ERRADO)
+    }else if(estado_buttom_direita == HIGH){
+      digitalWrite(pin_led_02, HIGH);//Led02(ERRADO)
       x = 2;
       fase = 2;
       ffase1 = true;
@@ -141,9 +143,10 @@ void fase2(){
 
   while(estado_buttom_esquerda != HIGH || estado_buttom_direita != HIGH){
     if(x==1){ //Se a pessoa foi para o caminho certo
+      action_capture(0);
       action_capture("amarelo");
       estado_buttom_esquerda = digitalRead(47);
-  	  estado_buttom_direita = digitalRead(41);
+      estado_buttom_direita = digitalRead(41);
 
       Serial.println("Botão esquerdo: ");
       Serial.println(estado_buttom_esquerda);
@@ -157,17 +160,17 @@ void fase2(){
       digitalWrite(pin_led_04, LOW);
       delay(400);
 
-  	  estado_buttom_esquerda = digitalRead(47);
-  	  estado_buttom_direita = digitalRead(41);
+      estado_buttom_esquerda = digitalRead(47);
+      estado_buttom_direita = digitalRead(41);
 
-  	  if(estado_buttom_esquerda == HIGH){
+      if(estado_buttom_esquerda == HIGH){
         digitalWrite(pin_led_03, HIGH);
         x = 3;
         fase = 3;
         ffase2 = true;
         fase3();
-  	  }else if(estado_buttom_direita == HIGH){
-    	  digitalWrite(pin_led_04, HIGH);
+      }else if(estado_buttom_direita == HIGH){
+        digitalWrite(pin_led_04, HIGH);
         x = 4;
         fase = 3;
         ffase2 = true;
@@ -178,7 +181,7 @@ void fase2(){
     else if(x==2){
       action_capture("vermelho");
       estado_buttom_esquerda = digitalRead(47);
-  	  estado_buttom_direita = digitalRead(41);
+      estado_buttom_direita = digitalRead(41);
 
       Serial.println("Botão esquerdo: ");
       Serial.println(estado_buttom_esquerda);
@@ -192,8 +195,8 @@ void fase2(){
       digitalWrite(pin_led_08, LOW);
       delay(400);
 
-  	  estado_buttom_esquerda = digitalRead(47);
-  	  estado_buttom_direita = digitalRead(41);
+      estado_buttom_esquerda = digitalRead(47);
+      estado_buttom_direita = digitalRead(41);
       if(estado_buttom_esquerda == HIGH){
         digitalWrite(pin_led_07, HIGH);
         x = 7;
@@ -202,7 +205,7 @@ void fase2(){
         fase3();
       }
       else if(estado_buttom_direita == HIGH){
-    	  digitalWrite(pin_led_08, HIGH);
+        digitalWrite(pin_led_08, HIGH);
         x = 8;
         fase = 3;
         ffase2 = true;
@@ -220,7 +223,7 @@ void fase3 (){
     if(x==3){
       action_capture("amarelo");
       estado_buttom_esquerda = digitalRead(47);
-  	  estado_buttom_direita = digitalRead(41);
+      estado_buttom_direita = digitalRead(41);
 
       Serial.println("Botão esquerdo: ");
       Serial.println(estado_buttom_esquerda);
@@ -232,8 +235,8 @@ void fase3 (){
       digitalWrite(pin_led_06, LOW);
       delay(400);
 
-  	  estado_buttom_esquerda = digitalRead(47);
-  	  estado_buttom_direita = digitalRead(41);
+      estado_buttom_esquerda = digitalRead(47);
+      estado_buttom_direita = digitalRead(41);
 
       if(estado_buttom_esquerda == HIGH || estado_buttom_direita == HIGH){
         action_capture("verde");
@@ -251,7 +254,7 @@ void fase3 (){
     else if (x==4){
       action_capture("vermelho");
       estado_buttom_esquerda = digitalRead(47);
-  	  estado_buttom_direita = digitalRead(41);
+      estado_buttom_direita = digitalRead(41);
 
       Serial.println("Botão esquerdo: ");
       Serial.println(estado_buttom_esquerda);
@@ -263,8 +266,8 @@ void fase3 (){
       digitalWrite(pin_led_05, LOW);
       delay(400);
 
-  	  estado_buttom_esquerda = digitalRead(47);
-  	  estado_buttom_direita = digitalRead(41);
+      estado_buttom_esquerda = digitalRead(47);
+      estado_buttom_direita = digitalRead(41);
 
       if(estado_buttom_esquerda == HIGH || estado_buttom_direita == HIGH){
         digitalWrite(pin_led_05, HIGH);
@@ -278,7 +281,7 @@ void fase3 (){
     else if(x==7){
       action_capture("vermelho");
       estado_buttom_esquerda = digitalRead(47);
-  	  estado_buttom_direita = digitalRead(41);
+      estado_buttom_direita = digitalRead(41);
 
       Serial.println("Botão esquerdo: ");
       Serial.println(estado_buttom_esquerda);
@@ -290,8 +293,8 @@ void fase3 (){
       digitalWrite(pin_led_09, LOW);
       delay(400);
 
-  	  estado_buttom_esquerda = digitalRead(47);
-  	  estado_buttom_direita = digitalRead(41);
+      estado_buttom_esquerda = digitalRead(47);
+      estado_buttom_direita = digitalRead(41);
 
       if(estado_buttom_esquerda == HIGH || estado_buttom_direita == HIGH){
         digitalWrite(pin_led_09, HIGH);
@@ -318,15 +321,15 @@ void fase4(){
 
   while(estado_buttom_esquerda != HIGH || estado_buttom_direita != HIGH){
     estado_buttom_esquerda = digitalRead(47);
-  	estado_buttom_direita = digitalRead(41);
+    estado_buttom_direita = digitalRead(41);
 
     Serial.println("Botão esquerdo: ");
     Serial.println(estado_buttom_esquerda);
     Serial.println("Botão direito: ");
     Serial.println(estado_buttom_direita);
 
-  	estado_buttom_esquerda = digitalRead(47);
-  	estado_buttom_direita = digitalRead(41);
+    estado_buttom_esquerda = digitalRead(47);
+    estado_buttom_direita = digitalRead(41);
 
    if(estado_buttom_esquerda == HIGH || estado_buttom_direita == HIGH){
     //Reiniciando Labirinto
