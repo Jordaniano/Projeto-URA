@@ -66,7 +66,6 @@ void setup() {
 }
 
 void loop() {
-  action_capture("vermelho");
   if (ffase1 == false){
     fase = 1;
   }else if (ffase2 == false){
@@ -143,7 +142,6 @@ void fase2(){
 
   while(estado_buttom_esquerda != HIGH || estado_buttom_direita != HIGH){
     if(x==1){ //Se a pessoa foi para o caminho certo
-      action_capture(0);
       action_capture("amarelo");
       estado_buttom_esquerda = digitalRead(47);
       estado_buttom_direita = digitalRead(41);
@@ -178,7 +176,7 @@ void fase2(){
       }
     }
 
-    else if(x==2){
+    else if(x==2){ //se a pessoa for pro caminho errado
       action_capture("vermelho");
       estado_buttom_esquerda = digitalRead(47);
       estado_buttom_direita = digitalRead(41);
@@ -220,7 +218,7 @@ void fase3 (){
   estado_buttom_direita = 0;
 
   while(estado_buttom_esquerda != HIGH || estado_buttom_direita != HIGH){
-    if(x==3){
+    if(x==3){ // caminho certo
       action_capture("amarelo");
       estado_buttom_esquerda = digitalRead(47);
       estado_buttom_direita = digitalRead(41);
