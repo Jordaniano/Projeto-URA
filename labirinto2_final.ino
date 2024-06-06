@@ -14,12 +14,12 @@ int pin_led_f = 2;
 // Leds dos caminhos
 int pin_led_01 = 51;
 int pin_led_02 = 13;
-int pin_led_03 = 52;
-int pin_led_04 = 28;
-int pin_led_05 = 48;
-int pin_led_06 = 53;
+int pin_led_04 = 52;
+int pin_led_03 = 28;
+int pin_led_06 = 48;
+int pin_led_05 = 53;
 int pin_led_07 = 37;
-int pin_led_08 = 46;
+int pin_led_08 = 8;
 int pin_led_09 = 40;
 
 //Botões
@@ -122,12 +122,14 @@ void fase1(){
 
     if(estado_buttom_esquerda == HIGH){
       digitalWrite(pin_led_01, HIGH);//Led01(CERTO)
+      action_capture("azul");
       x = 1;
       fase = 2;
       ffase1 = true;
       fase2();
     }else if(estado_buttom_direita == HIGH){
       digitalWrite(pin_led_02, HIGH);//Led02(ERRADO)
+      action_capture("vermelho");
       x = 2;
       fase = 2;
       ffase1 = true;
@@ -142,7 +144,7 @@ void fase2(){
 
   while(estado_buttom_esquerda != HIGH || estado_buttom_direita != HIGH){
     if(x==1){ //Se a pessoa foi para o caminho certo
-      action_capture("amarelo");
+      action_capture("azul");
       estado_buttom_esquerda = digitalRead(47);
       estado_buttom_direita = digitalRead(41);
 
@@ -162,12 +164,14 @@ void fase2(){
       estado_buttom_direita = digitalRead(41);
 
       if(estado_buttom_esquerda == HIGH){
+        action_capture("azul");
         digitalWrite(pin_led_03, HIGH);
         x = 3;
         fase = 3;
         ffase2 = true;
         fase3();
       }else if(estado_buttom_direita == HIGH){
+        action_capture("vermelho");
         digitalWrite(pin_led_04, HIGH);
         x = 4;
         fase = 3;
@@ -196,14 +200,14 @@ void fase2(){
       estado_buttom_esquerda = digitalRead(47);
       estado_buttom_direita = digitalRead(41);
       if(estado_buttom_esquerda == HIGH){
-        digitalWrite(pin_led_07, HIGH);
+        digitalWrite(pin_led_08, HIGH);
         x = 7;
         fase = 3;
         ffase2 = true;
         fase3();
       }
       else if(estado_buttom_direita == HIGH){
-        digitalWrite(pin_led_08, HIGH);
+        digitalWrite(pin_led_07, HIGH);
         x = 8;
         fase = 3;
         ffase2 = true;
@@ -219,7 +223,7 @@ void fase3 (){
 
   while(estado_buttom_esquerda != HIGH || estado_buttom_direita != HIGH){
     if(x==3){ // caminho certo
-      action_capture("amarelo");
+
       estado_buttom_esquerda = digitalRead(47);
       estado_buttom_direita = digitalRead(41);
 
@@ -276,7 +280,7 @@ void fase3 (){
       }
     }
 
-    else if(x==7){
+    else if(x==8){
       action_capture("vermelho");
       estado_buttom_esquerda = digitalRead(47);
       estado_buttom_direita = digitalRead(41);
@@ -303,9 +307,9 @@ void fase3 (){
       }
     }
 
-    else if (x==8){
+    else if (x==7){
       action_capture("vermelho");
-      x = 8;
+      x = 7;
       fase = 4;
       ffase3 = true;
       fase4();
