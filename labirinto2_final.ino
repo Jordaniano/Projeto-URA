@@ -14,10 +14,10 @@ int pin_led_f = 2;
 // Leds dos caminhos
 int pin_led_01 = 51;
 int pin_led_02 = 13;
-int pin_led_04 = 52;
-int pin_led_03 = 28;
-int pin_led_06 = 48;
-int pin_led_05 = 53;
+int pin_led_03 = 52;
+int pin_led_04 = 28;
+int pin_led_05 = 48;
+int pin_led_06 = 53;
 int pin_led_07 = 37;
 int pin_led_08 = 8;
 int pin_led_09 = 40;
